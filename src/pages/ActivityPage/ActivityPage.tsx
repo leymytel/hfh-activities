@@ -8,6 +8,7 @@ import { ActivityInterface } from "../../interfaces/ActivityInterface";
 import ActivityDetails from "../../components/ActivityDetails";
 import NavBar from "../../components/NavBar";
 import { useAuth } from "../../hooks/useAuth";
+import EnergyForm from "../../components/EnergyForm";
 
 const ActivityPage: React.FC = () => {
   const [selectedActivity, setSelectedActivity] = useState<ActivityInterface | null>(null);
@@ -20,6 +21,7 @@ const ActivityPage: React.FC = () => {
   return (
     <div className="activity-page">
       <NavBar />
+      <EnergyForm />
       <div className={`activity-page-details-wrapper ${selectedActivity ? 'selected' : ''}`}>
         <ActivityList activities={TEST_DATA_ACTIVITIES} onActivitySelected={activity => setSelectedActivity(activity)}/>
         <ActivityDetails activity={selectedActivity} />
