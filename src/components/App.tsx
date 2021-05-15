@@ -1,10 +1,13 @@
 import React from 'react';
-import ActivityPage from "../features/activities/ActivityPage";
+import Router from "./Router";
+import { AuthProvider } from "./AuthContext";
 
 function App() {
   return (
     <div>
-      <ActivityPage />
+      <AuthProvider>
+        <Router />
+      </AuthProvider>
     </div>
   );
 }
