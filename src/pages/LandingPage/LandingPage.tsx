@@ -1,9 +1,13 @@
 import React, { useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+import { HatTokenValidation } from "@dataswift/hat-js/lib/utils/HatTokenValidation";
+
+import './LandingPage.scss';
+
 import NavBar from "../../components/NavBar";
 import { config } from "../../config";
-import { HatTokenValidation } from "@dataswift/hat-js/lib/utils/HatTokenValidation";
-import { useHistory } from 'react-router-dom';
 import { useAuth } from "../../hooks/useAuth";
+import backgroundImage from '../../assets/background.jpg';
 
 const LandingPage: React.FC = () => {
   const history = useHistory();
@@ -20,6 +24,7 @@ const LandingPage: React.FC = () => {
   return (
     <div>
       <NavBar />
+      <img src={backgroundImage} className="landing-page-background-image" />
     </div>
   )
 }
