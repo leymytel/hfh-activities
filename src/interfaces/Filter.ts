@@ -11,4 +11,5 @@ export type FilterType = {
   temperatureSummer?: string;
   floorsNumber?: string;
   energyUsage?: string;
+  energyPerformanceCertificate?: string;
 };

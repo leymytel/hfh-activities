@@ -2,11 +2,16 @@ import React from 'react';
 import { config } from "../config";
 import './NavBar.scss';
 import { useAuth } from "../hooks/useAuth";
+import logo from '../assets/logo.png';
 
 const NavBar: React.FC = () => {
   const { isAuthenticated, logout } = useAuth();
   return (
     <header>
+      <div className="nav-logo-wrapper">
+        <img src={logo} height="40" alt={'Watt Should I Do Logo'} />
+        <div>What Should I Do?</div>
+      </div>
       {isAuthenticated ? (
         <button className="nav-button-sign-out" onClick={() => logout()}>Sign out</button>
       ) : (
