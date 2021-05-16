@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(2),
   },
   filter: {
-    maxWidth: '50rem',
+    maxWidth: '1100px',
     padding: '1rem',
     minWidth: '700px',
   },
@@ -69,6 +69,7 @@ const EnergyForm: React.FC<{ updateFilter: (data: FilterType) => void }> = ({
       temperatureSummer: '',
       floorsNumber: '',
       energyUsage: '',
+      energyPerformanceCertificate: ''
     },
   });
 
@@ -146,6 +147,21 @@ const EnergyForm: React.FC<{ updateFilter: (data: FilterType) => void }> = ({
                     <MenuItem value={'detached'}>Detached</MenuItem>
                     <MenuItem value={'semi detached'}>Semi detached</MenuItem>
                     <MenuItem value={'terraced'}>Terraced</MenuItem>
+                  </Select>
+                </FormControl>
+
+                <FormControl className={classes.formControl}>
+                  <InputLabel id="demo-controlled-open-select-label">
+                    Energy Performance Certificate (EPC)
+                  </InputLabel>
+                  <Select {...register('energyPerformanceCertificate')} defaultValue="">
+                    <MenuItem value={'a'}>A</MenuItem>
+                    <MenuItem value={'b'}>B</MenuItem>
+                    <MenuItem value={'c'}>C</MenuItem>
+                    <MenuItem value={'d'}>D</MenuItem>
+                    <MenuItem value={'e'}>E</MenuItem>
+                    <MenuItem value={'f'}>F</MenuItem>
+                    <MenuItem value={'g'}>G</MenuItem>
                   </Select>
                 </FormControl>
               </div>
