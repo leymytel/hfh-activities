@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@dataswift/hat-js": "^v0.5.0-9d14bda",
+    "@dataswift/hat-js": "^0.5.0",
     "@material-ui/core": "^4.11.4",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -13,6 +13,7 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/react-router-dom": "^5.1.7",
+    "date-fns": "^2.21.3",
     "node-sass": "5.0.0",
     "query-string": "^7.0.0",
     "react": "^17.0.2",

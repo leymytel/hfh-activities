@@ -1161,12 +1161,12 @@
   resolved "https://registry.yarnpkg.com/@csstools/normalize.css/-/normalize.css-10.1.0.tgz#f0950bba18819512d42f7197e56c518aa491cf18"
   integrity sha512-ij4wRiunFfaJxjB0BdrYHIH8FxBJpOwNPhhAcunlmPdXudL1WQV1qoP9un6JsEBAgQH+7UXyyjh0g7jTxXK6tg==
 
-"@dataswift/hat-js@^v0.5.0-9d14bda":
-  version "0.5.0-9d14bda"
-  resolved "https://npm.pkg.github.com/download/@dataswift/hat-js/v0.5.0-9d14bda/5a633b2f3a71d7d96c35d705a83498d3249cc3cf4cb37d0cb41eb6581516fa00#17469c0ed294400fb2cb1cb9da36f266d68ebc9a"
-  integrity sha512-Qot+PlOw8EK/lwR5m+kDYQgqN44Xgcj3jbLkOEd6VhuoXVBVko80umgDZ2LhfYdFEt0a/W8FRYbkDYNixVErHg==
+"@dataswift/hat-js@^0.5.0":
+  version "0.5.0"
+  resolved "https://npm.pkg.github.com/download/@dataswift/hat-js/v0.5.0/c5b0002a67ae907aace5c796ebd40a4b12fc202cf34e99c14ed9c55861f9a44d#37d99ef7f56bfb04c448adbf9bc110bb73655fea"
+  integrity sha512-vd745FEnbiUpc7C8iElGeJSeiDNhpER5fypIxTgQMkpzsPARDHDEurTcWRX5RiNixzuWNT3ViF6iK8IvrjualQ==
   dependencies:
-    cross-fetch "^3.1.4"
+    cross-fetch "^3.1.2"
     jwt-decode "^3.1.2"
 
 "@emotion/hash@^0.8.0":
@@ -3771,7 +3771,7 @@ create-hmac@^1.1.0, create-hmac@^1.1.4, create-hmac@^1.1.7:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-cross-fetch@^3.1.4:
+cross-fetch@^3.1.2:
   version "3.1.4"
   resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.1.4.tgz#9723f3a3a247bf8b89039f3a380a9244e8fa2f39"
   integrity sha512-1eAtFWdIubi6T4XPy6ei9iUFoKpUkIF971QLN8lIvvvwueI65+Nw5haMNKUwfJxabqlIIDODJKGrQ66gxC0PbQ==
@@ -4098,6 +4098,11 @@ data-urls@^2.0.0:
     abab "^2.0.3"
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.0.0"
+
+date-fns@^2.21.3:
+  version "2.21.3"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.21.3.tgz#8f5f6889d7a96bbcc1f0ea50239b397a83357f9b"
+  integrity sha512-HeYdzCaFflc1i4tGbj7JKMjM4cKGYoyxwcIIkHzNgCkX8xXDNJDZXgDDVchIWpN4eQc3lH37WarduXFZJOtxfw==
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.9:
   version "2.6.9"

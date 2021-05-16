@@ -1,4 +1,6 @@
 import React from 'react';
+import { format } from 'date-fns';
+
 import { ActivityInterface } from "../interfaces/ActivityInterface";
 
 interface ActivityListItemProps {
@@ -13,11 +15,14 @@ const ActivityListItem: React.FC<ActivityListItemProps> = ({ activity, onActivit
     dateCreated
   } = activity;
 
+  console.log(dateCreated);
+  const formattedDate = format(new Date(dateCreated as string), 'dd MMMM yyyy, HH:mm');
+
   return (
     <div className="activity-list-item-wrapper" onClick={() => onActivitySelected(activity)}>
-      <h2 className="activity-list-item-title">{title}</h2>
+      <div className="activity-list-item-title">{title}</div>
       <p className="activity-list-item-description">{description}</p>
-      <div>{dateCreated}</div>
+      <div className="activity-list-item-date">{formattedDate}</div>
     </div>
   );
 }
