@@ -12,6 +12,7 @@ import {
   Button,
   Typography,
 } from '@material-ui/core';
+import { FilterType } from '../interfaces/Filter';
 
 const useStyles = makeStyles((theme) => ({
   form: {
@@ -48,26 +49,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-type FormValues = {
-  energyTypes: string;
-  heatingTypes: string;
-  glazingTypes: string;
-  vehicleTypes: string;
-  domicileTypes: string;
-  occupants: string;
-  yearsBuilt: string;
-  numAppliances: string;
-  temperatureWinter: string;
-  temperatureSummer: string;
-  floorsNumber: string;
-  energyUsage: string;
-};
-
-const EnergyForm: React.FC = () => {
+const EnergyForm: React.FC<{ updateFilter: (data: FilterType) => void }> = ({
+  updateFilter,
+}) => {
   const [open, setOpen] = useState(false);
   const classes = useStyles();
 
-  const { register, handleSubmit } = useForm<FormValues>({
+  const { register, handleSubmit } = useForm<FilterType>({
     defaultValues: {
       energyTypes: '',
       heatingTypes: '',
@@ -84,7 +72,10 @@ const EnergyForm: React.FC = () => {
     },
   });
 
-  const onSubmit = handleSubmit((data) => console.log(data));
+  const onSubmit = handleSubmit((data) => {
+    console.log(data);
+    updateFilter(data);
+  });
 
   return (
     <div>
@@ -165,7 +156,7 @@ const EnergyForm: React.FC = () => {
               <div className={classes.formRow}>
                 <FormControl className={classes.formControl}>
                   <TextField
-                    {...register('occupants')}
+                    inputProps={register('occupants')}
                     label="Occupants"
                     helperText="Example: 1 - 100"
                   />
@@ -173,7 +164,7 @@ const EnergyForm: React.FC = () => {
 
                 <FormControl className={classes.formControl}>
                   <TextField
-                    {...register('yearsBuilt')}
+                    inputProps={register('yearsBuilt')}
                     label="Years built"
                     helperText="Example: 1 - 2021"
                   />
@@ -181,27 +172,24 @@ const EnergyForm: React.FC = () => {
 
                 <FormControl className={classes.formControl}>
                   <TextField
-                    {...register('numAppliances')}
+                    inputProps={register('numAppliances')}
                     label="Number of Appliances"
                     helperText="Example: 1 - 100"
                   />
                 </FormControl>
               </div>
-            </Paper>
 
-            <Paper elevation={3} className={classes.section}>
-              <Typography variant="h5">Energy</Typography>
               <div className={classes.formRow}>
                 <FormControl className={classes.formControl}>
                   <TextField
-                    {...register('temperatureWinter')}
-                    label="Winter Temperate"
+                    inputProps={register('temperatureWinter')}
+                    label="Winter Temperature"
                     helperText="Example: -100 - 100"
                   />
                 </FormControl>
                 <FormControl className={classes.formControl}>
                   <TextField
-                    {...register('temperatureSummer')}
+                    inputProps={register('temperatureSummer')}
                     label="Summer Temperature"
                     helperText="Example: 1 - 100"
                   />
@@ -209,7 +197,7 @@ const EnergyForm: React.FC = () => {
 
                 <FormControl className={classes.formControl}>
                   <TextField
-                    {...register('energyUsage')}
+                    inputProps={register('energyUsage')}
                     label="Energy Usage"
                     helperText="Example: 1 - 100000"
                   />
