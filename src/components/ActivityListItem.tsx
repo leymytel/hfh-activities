@@ -20,7 +20,7 @@ const ActivityListItem: React.FC<ActivityListItemProps> = ({ activity, onActivit
 
   return (
     <div className="activity-list-item-wrapper" onClick={() => onActivitySelected(activity)}>
-      <div className="activity-list-item-title">{title}</div>
+      <div className="activity-list-item-title" dangerouslySetInnerHTML={{ __html: title}} />
       <p className="activity-list-item-description">{description}</p>
       <div className="activity-list-item-date">{formattedDate}</div>
     </div>

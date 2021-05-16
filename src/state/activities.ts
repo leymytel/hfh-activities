@@ -26,7 +26,6 @@ export const defaultState: StateType = {
 export const reducer = (state: StateType, action: any) => {
   switch (action.type) {
     case actionTypes.updateFilter:
-      console.log('here?');
       return { activities: applyFilter(action.data), filter: action.data };
     default:
       return state;

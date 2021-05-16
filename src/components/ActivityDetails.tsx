@@ -16,7 +16,7 @@ const ActivityDetails: React.FC<ActivityListItemProps> = ({ activity }) => {
 
   return (
     <div className="activity-details">
-      <div className="activity-details-title">{title}</div>
+      <div className="activity-details-title" dangerouslySetInnerHTML={{ __html: title}} />
       <p className="activity-details-description">{description}</p>
       <p className="activity-details-long-description">{details}</p>
     </div>
