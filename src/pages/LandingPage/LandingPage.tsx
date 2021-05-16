@@ -24,7 +24,7 @@ const LandingPage: React.FC = () => {
   return (
     <div>
       <NavBar />
-      <img src={backgroundImage} className="landing-page-background-image" />
+      <img src={backgroundImage} className="landing-page-background-image" alt={''}/>
     </div>
   )
 }

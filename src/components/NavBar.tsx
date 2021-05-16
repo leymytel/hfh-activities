@@ -10,7 +10,7 @@ const NavBar: React.FC = () => {
     <header>
       <div className="nav-logo-wrapper">
         <img src={logo} height="40" alt={'Watt Should I Do Logo'} />
-        <div>What Should I Do?</div>
+        <div>Watt Should I Do?</div>
       </div>
       {isAuthenticated ? (
         <button className="nav-button-sign-out" onClick={() => logout()}>Sign out</button>
